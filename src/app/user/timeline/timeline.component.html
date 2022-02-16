@@ -1,0 +1,21 @@
+<div style="padding: 10px;">
+    <p-timeline [value]="events" align="alternate" styleClass="customized-timeline">
+        <ng-template pTemplate="marker" let-event>
+            <span class="custom-marker p-shadow-2" [style.backgroundColor]="event.color">
+                <!-- <i [ngClass]="event.icon"></i> -->
+                <mat-icon>{{event.icon}}</mat-icon>
+            </span>
+        </ng-template>
+        <ng-template pTemplate="content" let-event>
+            <p-card [header]="event.displayName" [subheader]="event.createTime">
+                <div style="">
+                    <img *ngIf="event.image" [src]="event.image" width="200" class="p-shadow-2" />
+                    <p *ngIf="event.description">{{event.description}}</p>
+                    <!-- <button pButton label="Read more" class="p-button-text"></button> -->
+
+                    <button *ngIf="event.link" mat-button color="primary" (click)="onDetailClick(event)">查看</button>
+                </div>
+            </p-card>
+        </ng-template>
+    </p-timeline>
+</div>

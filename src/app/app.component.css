@@ -1,0 +1,34 @@
+:host {
+    --header-height: 64px;
+}
+
+
+app-header {
+    position: fixed;
+    width: 100%;
+    display: block;
+    z-index: 100;
+    /* z-index: 1000;
+    position: sticky;
+    top: 0; */
+}
+
+mat-sidenav {
+    width: 256px;
+    margin-top: var(--header-height);
+    height: calc(100vh - var(--header-height));
+}
+
+mat-sidenav-content {
+    /* padding: 5px; */
+    margin-top: var(--header-height);
+    padding: 0 .5rem;
+    min-height: calc(100vh - var(--header-height));
+    overflow: hidden;
+}
+
+@media (max-width: 40rem) {
+    :host {
+        --header-height: 56px;
+    }
+}

@@ -1,0 +1,11 @@
+.card-wrapper {
+    width: 100%;
+    min-height: calc(100vh - var(--header-height));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    max-width: 400px;
+}
