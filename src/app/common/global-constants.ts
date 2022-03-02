@@ -1,7 +1,7 @@
 export class GlobalConstants {
     public static domain: string = 'san11pk';
     public static apiDomain: string = "https://api.san11pk.org";
-    public static san11ServerUrl: string = GlobalConstants.apiDomain + ':8090';
+    public static san11ServerUrl: string = GlobalConstants.apiDomain;
     public static fileServerUrl: string = 'https://storage.googleapis.com/san11-resources';
 
     public static maxBinarySize: number = 10 * 1024 * 1024 * 1024; // 10GB
