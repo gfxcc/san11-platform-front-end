@@ -1,6 +1,9 @@
 FROM node:16.10
 
+WORKDIR /app
+COPY ./ /app
+
 RUN npm install -g @angular/cli
 
-WORKDIR /app
+EXPOSE 4200
 CMD ng serve --host 0.0.0.0
