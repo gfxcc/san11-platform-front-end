@@ -1,0 +1,104 @@
+.main {
+    display: flex;
+    margin-bottom: 16px;
+    transition-duration: .5s;
+    border-radius: 4px;
+    background: transparent;
+    padding: 12px;
+    min-width: 250px;
+    /* width: 100%; */
+}
+
+.main:hover {
+    /* box-shadow: 0 1px 3px 0 rgb(60 64 67 / 30%), 0 4px 8px 3px rgb(60 64 67 / 15%); */
+}
+
+.author-section {
+    width: 144px;
+    padding: 12px;
+    min-height: 150px;
+    text-align: center;
+    color: #9e9fa2;
+}
+
+.author-section .span {}
+
+.author-image {
+    /* background-image: url('../../../assets/images/zhuge.jpg'); */
+    background-size: cover;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+.right {
+    padding: 10px;
+    width: calc(100% - 40px);
+}
+
+.header {
+    display: flex;
+    color: #9e9fa2;
+}
+
+.create-time {
+    margin-left: 10px;
+    padding-bottom: 12px;
+}
+
+.right .bottom {
+    height: 32px;
+}
+
+.icon {
+    color: #9e9fa2;
+    font-size: 16px;
+}
+
+.right .bottom .button {
+    margin-left: 5px;
+    height: 32px;
+    color: #9e9fa2;
+}
+
+.reply-section {
+    margin-top: 5px;
+    display: flex;
+}
+
+.right .author-image {
+    background-size: cover;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.comment-input {
+    overflow: initial;
+    outline: none;
+}
+
+.reply-section form {
+    width: 90%;
+    margin-left: 10px;
+}
+
+.actions-section button {
+    margin-left: 5px;
+    height: 32px;
+}
+
+@media (max-width: 40rem) {
+    .main {
+        padding: 6px;
+    }
+
+    .author-section {
+        padding: 6px;
+    }
+
+    .author-image {
+        width: 40px;
+        height: 40px;
+    }
+}

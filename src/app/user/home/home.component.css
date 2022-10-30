@@ -1,0 +1,40 @@
+.top {
+    background-color: #F9F9F9;
+    width: 100%;
+    min-height: 100px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.bottom {
+    width: 100%;
+    /* height: calc(100% - 150px); */
+    /* background-color: #F1F1F1; */
+}
+
+.user-section {
+    padding: 20px 0 8px 0;
+    font-size: 1.2rem;
+    width: 80%;
+    max-width: 700px;
+}
+
+.top-right {
+    flex-grow: 1;
+    display: flex;
+}
+
+.tab-groups {
+    width: 100%;
+}
+
+.author-sub-count {
+    color: #606060;
+    margin-right: 4px;
+    text-transform: none;
+    font-family: "Roboto", "Arial", sans-serif;
+    font-size: 1rem;
+    line-height: 1.8rem;
+    font-weight: 400;
+}

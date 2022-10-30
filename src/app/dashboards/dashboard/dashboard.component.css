@@ -1,0 +1,40 @@
+
+.container {
+    margin-top: 10px;
+}
+
+.grid {
+    min-height: 200px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    grid-auto-rows: auto;
+    place-content: left;
+    /* overflow-x: none; */
+    /* overflow-y: scroll; */
+}
+
+.card {
+    float: left;
+    margin: 10px;
+}
+
+.module {
+    border-radius: 2px;
+    width: 350px;
+}
+
+.module:hover {
+    background-color: #eee;
+    color: #607d8b;
+}
+
+.dashboard-placeholder {
+    min-height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: grey;
+    font-size: 2rem;
+    font-weight: 500;
+    font-style: italic;
+}

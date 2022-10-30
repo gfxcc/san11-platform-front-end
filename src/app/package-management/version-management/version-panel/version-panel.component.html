@@ -1,0 +1,29 @@
+<div *ngIf="downloadProgressBar" class="progress-bar-container">
+    <mat-progress-bar color="primary" [mode]="downloadProgress === 0 ? 'buffer'
+        : 'determinate'" [value]="downloadProgress"></mat-progress-bar>
+    <div style="display: flex;">
+        <span class="example-spacer"></span>
+        <div style="margin-right: 100px;">{{this.speed.toFixed(1)}}
+            {{this.unit}}</div>
+    </div>
+</div>
+
+<div class="head" style="height: 44px;">
+    <!-- <div class="heading-1">版本</div> -->
+    <span class="example-spacer"></span>
+    <button *ngIf="hasEditPermission" class="update-button" style="margin-top: 5px;"
+        mat-button mat-raised-button color="primary" (click)="onUpdate()">更新</button>
+</div>
+
+<mat-tab-group dynamicHeight [(selectedIndex)]="this.tabSelectedIndex"
+    class="shadow-border" style="margin-top: -44px;">
+    <div *ngFor="let branch of branchs">
+        <mat-tab [label]="branch.name" [disabled]="branch.disabled">
+            <branch [branch]="branch" [package]="package"
+                [editorPermission]="hasEditPermission"
+                (reload)="this.loadBinaries()"
+                (updateDownloadProgress)="this.updateDownloadProgress($event)">
+            </branch>
+        </mat-tab>
+    </div>
+</mat-tab-group>

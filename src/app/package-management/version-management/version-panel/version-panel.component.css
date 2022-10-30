@@ -1,0 +1,24 @@
+.mat-progress-bar {
+    height: 2px;
+    width: 100%;
+}
+
+.progress-bar-container {
+    height: 2px;
+}
+
+.head {
+    display: flex;
+}
+
+.head > .update-button {
+    margin-top: 2px;
+    margin-right: 5px;
+    z-index: 1000;
+}
+
+@media (max-width: 40rem) {
+    .update-button {
+        display: none;
+    }
+}

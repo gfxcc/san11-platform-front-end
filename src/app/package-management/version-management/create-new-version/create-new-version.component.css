@@ -1,0 +1,32 @@
+.form-field {
+    width: 100%;
+}
+
+.form {
+    max-width: 400px;
+}
+
+.actions {
+    display: flex;
+    width: 100%;
+}
+
+.version-section {
+    display: flex;
+}
+
+.version-field {
+    width: 20%;
+    margin: 5px;
+    flex: 1 1 auto;
+}
+
+.upload-section {
+    margin-bottom: 10px;
+}
+
+.upload-section mat-button-wrapper {
+    max-width: 100%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}

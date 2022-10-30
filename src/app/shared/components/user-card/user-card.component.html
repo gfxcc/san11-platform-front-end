@@ -1,0 +1,8 @@
+<div class="author-card" style="display: flex;">
+    <img [hidden]="this.hideAuthorImage" [src]="this.userImageUrl" (load)="this.hideAuthorImage = false;" class="author-image">
+
+    <span class="heading-1 user-text">
+    {{this.user?.username}}
+    </span>
+
+</div>

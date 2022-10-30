@@ -1,0 +1,12 @@
+<div class="main-list">
+    <a *ngFor="let article of articles" class="col-1-4">
+        <app-article-card [article]="article">
+        </app-article-card>
+    </a>
+</div>
+
+<div *ngIf="articles?.length === 0" class="dashboard-placeholder">
+    <p>
+        空空如也
+    </p>
+</div>

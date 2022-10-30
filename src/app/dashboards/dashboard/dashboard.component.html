@@ -1,0 +1,29 @@
+<div class="container">
+    <div *ngIf="this.listRequest" style="margin-left: 10px;">
+        <!-- <div class="example-spacer"></div> -->
+
+        <mat-form-field appearance="fill">
+            <mat-label>排序优先</mat-label>
+            <mat-select [(value)]="selectedOrder"
+                (selectionChange)="onOrderChanged($event)">
+                <mat-option [value]="option.value" *ngFor="let option of
+                    orderOptions">{{
+                    option.viewValue }}</mat-option>
+            </mat-select>
+        </mat-form-field>
+    </div>
+
+    <div class="grid">
+        <a *ngFor="let package of packages" class="card">
+            <div style="display: flex; align-items: center;">
+                <app-package-card [package]="package" class="module"></app-package-card>
+            </div>
+        </a>
+    </div>
+</div>
+
+<div *ngIf="packages?.length === 0" class="dashboard-placeholder">
+    <p>
+        空空如也
+    </p>
+</div>
